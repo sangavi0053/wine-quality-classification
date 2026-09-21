@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wine Quality Classifier</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="hero">
+            <div class="wine-icon">🍷</div>
+
+            <p class="tag">AI POWERED • MACHINE LEARNING</p>
+
+            <h1>Wine Quality<br><span>Classifier</span></h1>
+
+            <p class="subtitle">
+                Analyze wine properties and discover whether your wine
+                is predicted to be good or bad.
+            </p>
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-header">
+                <div>
+                    <h2>Wine Properties</h2>
+                    <p>Enter the chemical properties of the wine</p>
+                </div>
+
+                <div class="model-badge">
+                    Random Forest
+                </div>
+            </div>
+
+
+            <form id="wineForm">
+
+                <div class="input-group">
+                    <label>Fixed Acidity</label>
+                    <input type="number" step="any" id="fixed_acidity" placeholder="e.g. 7.4" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Volatile Acidity</label>
+                    <input type="number" step="any" id="volatile_acidity" placeholder="e.g. 0.7" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Citric Acid</label>
+                    <input type="number" step="any" id="citric_acid" placeholder="e.g. 0.0" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Residual Sugar</label>
+                    <input type="number" step="any" id="residual_sugar" placeholder="e.g. 1.9" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Chlorides</label>
+                    <input type="number" step="any" id="chlorides" placeholder="e.g. 0.076" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Free Sulfur Dioxide</label>
+                    <input type="number" step="any" id="free_sulfur_dioxide" placeholder="e.g. 11" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Total Sulfur Dioxide</label>
+                    <input type="number" step="any" id="total_sulfur_dioxide" placeholder="e.g. 34" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Density</label>
+                    <input type="number" step="any" id="density" placeholder="e.g. 0.9978" required>
+                </div>
+
+                <div class="input-group">
+                    <label>pH</label>
+                    <input type="number" step="any" id="pH" placeholder="e.g. 3.51" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Sulphates</label>
+                    <input type="number" step="any" id="sulphates" placeholder="e.g. 0.56" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Alcohol</label>
+                    <input type="number" step="any" id="alcohol" placeholder="e.g. 9.4" required>
+                </div>
+
+
+                <button type="submit">
+                    <span>🍷</span>
+                    Predict Wine Quality
+                    <span>→</span>
+                </button>
+
+            </form>
+
+
+            <div class="result-box">
+                <p>Prediction Result</p>
+                <h2 id="result">Enter values to get prediction</h2>
+            </div>
+
+        </div>
+
+
+        <footer>
+            <span>Machine Learning Project</span>
+            <span>•</span>
+            <span>Random Forest Classifier</span>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
