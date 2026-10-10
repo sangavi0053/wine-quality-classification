@@ -2,13 +2,18 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import joblib
 import numpy as np
+from pathlib import Path
 
 app = Flask(__name__)
 CORS(app)
 
 # Load trained model and scaler
-model = joblib.load("../model/random_forest_model.pkl")
-scaler = joblib.load("../model/scaler.pkl")
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+MODEL_DIR = BASE_DIR / "model"
+
+model = joblib.load(MODEL_DIR / "random_forest_model.pkl")
+scaler = joblib.load(MODEL_DIR / "scaler.pkl")
 
 
 @app.route("/")
